@@ -1,0 +1,14 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+#
+# IMPORTANT: this file must sit at the ROOT of the Git repository you connect
+# to Render. If you push only this folder as its own repo, you're already done.
+
+services:
+  - type: web
+    name: roblox-chat-ws        # -> wss://roblox-chat-ws.onrender.com (rename if you like)
+    runtime: node
+    plan: free                  # free tier sleeps after inactivity; first connect may take ~50s
+    buildCommand: npm install   # exactly what Render runs to build
+    startCommand: npm start     # exactly what Render runs to start (node server.js)
+    healthCheckPath: /          # Render pings this; server.js answers 200 JSON on it
+    autoDeploy: true            # redeploy on every push to the connected branch
