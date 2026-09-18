@@ -1,0 +1,25 @@
+{
+  "name": "roblox-chat-ws",
+  "version": "1.0.0",
+  "description": "Global WebSocket chat API (single \"main\" room) for a Roblox game, built on Node.js + ws, ready to deploy on Render.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "client": "node examples/node-test-client.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "roblox",
+    "websocket",
+    "ws",
+    "chat",
+    "render",
+    "realtime"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
